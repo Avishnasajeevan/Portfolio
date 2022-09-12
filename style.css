@@ -1,0 +1,925 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html,body{
+    overflow-x: hidden;
+}  
+
+/***navigation style***/
+nav{
+  background: url("orange.jpeg");
+  height: 80px;
+  width: 100%;
+  position:absolute;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+} 
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 4px;
+
+}
+nav ul li a{
+  color:white;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  
+}
+nav ul li a.active,a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+/*****Menubar style*****/
+.checkbtn{
+  font-size: 31px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/***Responsive for nav*****/
+@media  (max-width: 968px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  nav{
+    background: url("orange.jpeg");
+  }
+}
+
+@media (min-width: 300px){
+  nav{
+    background: url("orange.jpeg");
+  }
+
+}
+
+/** responsive for menubar**/
+@media (max-width: 875px){
+  .checkbtn{
+    display: block;
+    color: white;
+    float: right;
+    cursor: pointer;
+    position: relative;
+  }
+  nav ul{
+    position: absolute;
+    width: 100%;
+    height: 95vh;
+    background: #17110a;
+    top: 75px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 50px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: red;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+/**logo style**/
+.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-left: -5%;
+}
+.logo span{
+    color: rgb(20, 20, 20);
+    font-weight: bold
+}
+
+/** home content styles**/
+.home{
+    display: flex;
+    background: url("orange.jpeg") no-repeat center;
+    max-width: 2000;
+    background-size: cover;
+    height: 80vh;
+    color: white;
+    min-height: 400px;
+    font-family:'ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 130px;
+}
+.text1{
+    font-size: 28px;
+    font-weight: 300;
+}
+.text2{
+    font-size: 47px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.text3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.text3 span{
+    color: rgb(19, 18, 18);
+    font-weight: 500;
+    text-shadow: 2px 2px 2px 2px grey;
+}
+.homebtn{
+  color: white;
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  cursor: pointer;
+  background: rgb(28, 27, 27);
+  border: 2px solid rgb(33, 31, 30) ;
+  border-radius:5px;
+}
+
+
+/** responsive for home content**/
+@media(max-width: 900px){
+  .home{
+    display: flex;
+    background: url("orange.jpeg") no-repeat center;
+    background-size: cover;
+    height: 90vh;
+    color: rgb(255, 255, 255);
+    min-height: 400px;
+    font-family:'ubuntu', sans-serif;
+    max-width: 1000;
+  }
+  .text1{
+    font-size: 25px;
+}
+.text2{
+    font-size: 44px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.text3{
+    font-size: 37px;
+    margin: 5px 0;
+}
+}
+
+@media only screen and (max-width:600px){
+  .text1{
+    font-size: 20px;
+    font-weight: 300;
+}
+.text2{
+    font-size: 40px;
+    font-weight: 600; 
+}
+.text3{
+    font-size: 32px;
+    margin: 5px 0;
+}
+}
+
+/**Space below home section***/
+.free{
+  padding: 50px;
+  background-color: black;
+}
+
+/***about content style***/
+.aboutimg{
+  width: 360px;
+  height:300px;
+  margin-left:10%;
+  margin-top:15%;
+  border-radius: 1%;
+}
+.abouthead{
+  margin-top: -28%;
+  margin-right: 10%;
+  margin-left:43%;
+  text-align: left;
+  color: rgb(22, 15, 12);
+  font-weight: 405;
+  font-size: 33px;
+  text-shadow: 1px 1px rgb(21, 10, 6);
+}
+.aboutme{
+  margin-top: -1%;
+  padding: 3%;
+  margin-right: 10%;
+  margin-left:40%;
+  text-align: left;
+  color: black;
+  border-radius: 0.5%;
+  font-weight: 430;
+}
+.aboutbtn{
+  margin-top: -5%;
+  margin-right: 10%;
+  margin-left:43%;
+  color: white;
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  cursor: pointer;
+  background: rgb(241, 112, 65);
+  border: 2px solid rgb(241, 112, 65) ;
+  border-radius:5px;
+}
+
+
+/***Responsive for about***/
+@media only screen and (min-width:300px ) and  (max-width:430px){
+  .aboutimg{
+    width: 270px;
+    height:220px;
+    margin-top:10%;
+    margin-left: 7%;
+  }
+  .abouthead{
+    margin-top: 1%;
+    text-align: center;
+    font-size: 27px;
+    margin-left: 7%;
+  }
+  .aboutme{
+    margin-top:0%;
+    margin-right: 3%;
+    margin-left: 3%;
+    text-align: justify;
+  }
+  .aboutbtn{
+    margin-top: 0%;
+    align-items: center;
+    margin-left: 32%;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (min-width:430px ) and (max-width:600px){
+  .aboutimg{
+    width: 350px;
+    height:290px;
+    margin-top:10%;
+    margin-left: 17%;
+  }
+  .abouthead{
+    margin: 1%;
+    text-align: center;
+    font-size: 28px;
+    margin-left: 6%;
+  }
+  .aboutme{
+    margin-top:2%;
+    margin-right: 8%;
+    margin-left: 8%;
+    text-align: justify;
+  }
+  .aboutbtn{
+    margin-top: -4%;
+    align-items: center;
+    margin-left: 38%;
+    padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+@media only screen and (min-width:601px) and (max-width:990px){
+  .aboutimg{
+    width: 360px;
+    height:300px;
+    margin-top:10%;
+    margin-left: 28%;
+  }
+  .abouthead{
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left:43%;
+  }
+  .aboutme{
+    margin-top:2%;
+    margin-left: 6%;
+    margin-right: 6%;
+    text-align: justify;
+  }
+  .aboutbtn{
+    margin-top: -3%;
+    align-items: center;
+    margin-left: 40%;
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (min-width:990px) and (max-width:1200px){
+  .abouthead{
+    margin-top: -28%;
+    margin-right: 30%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .aboutme{
+    margin-top:0%;
+    margin-right: 7%;
+    margin-left: 47%;
+    text-align: justify;
+  }
+  .aboutbtn{
+    margin-top: -3%;
+    align-items: center;
+    margin-left: 50%;
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/**services styling**/
+.servicebody{
+  margin-top: 1%;
+}
+.services{
+  margin-top: 10%;
+  padding-top: 5%;
+  color: rgb(12, 12, 12);
+  font-weight: 503;
+  font-size: 26px;
+  text-align: center;
+  
+}
+.services span{
+  color: rgb(241, 112, 65);
+  font-weight: 700;
+  font-size: 35px;
+  font-family: 'Ubuntu';
+  border: 0.5px 0.5px black;
+}
+.service-line{
+  padding-bottom:2%;
+}
+
+/***responsive for services***/
+@media only screen and (min-width:300px ) and  (max-width:430px){
+  .services{
+    font-weight: 503;
+    font-size: 24px;
+  }
+  .services span{
+    font-size: 32px;
+  }
+  .service-line{
+    padding-bottom:2.5%;
+  }
+}
+
+/**----service list---**/
+.container1{
+  width: 90%;
+  padding: 40px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2%;
+}
+.imgbox{
+  width: 240px;
+  height: 270px;
+  box-shadow: 0 0 10px 1px grey;
+  transition: 1s;
+  padding: 10px;
+}
+.imgbox img{
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+.imgbox:hover{
+  transform: scale(1.05);
+  z-index: 2;
+} 
+
+/**service list responsive**/
+@media only screen and (min-width:300px ) and  (max-width:430px){
+  .container1{
+    width: 100%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2%;
+  }
+}
+
+/***Skill style**/
+.skill-container{
+ align-items: center;
+}
+.skill-head1{
+  font-family:'Ubuntu';
+  margin-top: 5%;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.skill-head2{
+  font-family: 'Ubuntu'sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: rgb(227, 102, 57);
+  text-shadow: 1px 1px 1px 1px rgb(183, 93, 19);
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.sk1{
+  width:150px;
+  height: 150px;
+}
+
+/**-----skill responsive-----**/
+@media only screen and (min-width:300px ) and  (max-width:430px){
+  .skill-head1{
+    font-size: 13px;
+  }
+  .skill-head2{
+    font-size: 22px;
+  font-weight: 700;
+  }
+}
+
+/****skill progress bar style**/
+.skill-bar{
+  margin-top:5%;
+  margin: auto;
+  display: grid;
+  width: 700px;
+  border-radius: 10px;
+  padding: 25px 30px;
+  /* box-shadow: 5px 5px 10px rgb(193, 193, 193); */
+}
+.skill-bar .bar{
+    margin-top: 7px;
+}
+.skill-bar .bar:first-child{
+    margin-top: 0px;
+}
+.skill-bar .bar .info{
+    margin-bottom: 5px;
+}
+.skill-bar .bar .info span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.skill-bar .bar .progress-line{
+    position: relative;
+    height: 3px;
+    width: 100%;
+    background: rgb(218, 214, 214);
+    transform: scaleX(0);
+    transform-origin:left ;
+    box-shadow: inset 0px 1px 1px rgb(206, 203, 203),
+                      0px 1px rgb(197, 193, 193);
+    border-radius: 5px;
+    animation: animate 2s cubic-bezier(1,0,0.5,1) forwards;         /*bar width animation*/
+}
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: rgb(39, 37, 35);
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin:left ;
+    animation: animate 3s 3s cubic-bezier(1,0,0.5,1) forwards;      /*bar content width animation*/
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+/*span content width*/
+.progress-line.html span{
+    width: 100%;
+    
+}
+.progress-line.css span{
+    width: 100%;
+}
+.progress-line.js span{
+    width: 95%;
+}
+.progress-line.python span{
+    width: 100%;
+}
+.progress-line.django span{
+    width: 100%;
+}
+.progress-line.java span{
+    width: 90%;
+}
+/** span content after*/
+.progress-line.html span::after{
+    content: "100%";
+}
+.progress-line.css span::after{
+    content: "100%";
+}
+.progress-line.js span::after{
+    content: "95%";
+}
+.progress-line.python span::after{
+    content: "100%";
+}
+.progress-line.django span::after{
+    content: "100%";
+}
+.progress-line.java span::after{
+    content: "90%";
+}
+
+/*progress bar before and after */
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 6px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    background-color: rgb(210, 100, 11);
+    color: #fff;font-size: 12px;
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+/**--- responsive skill progress bar-----**/
+@media only screen and (max-width:750px){
+  .skill-bar{
+    margin-top:10%;
+    margin: auto;
+    display: grid;
+    width: 600px;
+  }
+}
+@media only screen and (max-width:650px){
+  .skill-bar{
+    margin-top:10%;
+    margin: auto;
+    display: grid;
+    width: 500px;
+  }
+}
+@media only screen and (max-width:540px){
+  .skill-bar{
+    margin-top:10%;
+    margin: auto;
+    display: grid;
+    width: 400px;
+  }
+}
+@media only screen and (max-width:455px){
+  .skill-bar{
+    margin-top:10%;
+    margin: auto;
+    display: grid;
+    width: 300px;
+  }
+}
+@media only screen and  (max-width:320px){
+  .skill-bar{
+    margin-top:10%;
+    margin: auto;
+    display: grid;
+    width: 270px;
+  }
+}
+
+
+/**space with logo before contact */
+.free-space{
+  background-color: #000;
+  padding: 32px;
+  margin-top: -13%;
+  }
+  .free-space .logo-ft{
+    color: white;
+      font-size: 39px;
+      font-weight: bold;
+      margin-left: 3%;
+  }
+  .logo-ft span{
+    color: rgb(198, 89, 20);
+    font-weight: bold
+  }
+
+/**----logo on footer responsive----**/
+@media only screen and (max-width:455px){
+  .free-space .logo-ft{
+      font-size: 36px;
+      font-weight: bold;
+      margin-left: 3%;
+  }
+}
+
+/**contact details**/
+.contact-body{
+  padding: 200px;
+  margin-top: -5%;
+}
+.contact-body .contact{
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: -1%;
+}
+
+.contact-body .ads-head{
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+}
+#email-id{
+  color: rgb(182, 63, 20);
+  cursor: pointer;
+}
+#location{
+  color: rgb(182, 63, 20);
+}
+#phone{
+  color: rgb(182, 63, 20);
+  font-size: 15px;
+  cursor: pointer;
+}
+.contact-2{
+  color: rgb(213, 73, 23);
+}
+/**----contact details responsive---**/
+@media only screen and (max-width:603px){
+  .contact-body .row .col{
+    margin-left: 25%;
+  }
+  
+}
+@media only screen and (max-width:430px){
+  .contact-body .row .col{
+    margin-left: 17%;
+  }
+}
+@media only screen and (max-width:350px){
+  .contact-body .row .col{
+    margin-left: 5%;
+  }
+}
+
+/**footer styling**/
+footer{
+  padding: 10px 0;
+  background-color: black;
+}
+footer .social{
+  text-align: left;
+  padding-bottom: 6px;
+  margin-left: 5%;
+  margin-top: 3px;
+  color: rgb(224, 76, 22);
+}
+footer .social a{
+  font-size: 20px;
+  color: inherit ;
+  border: 1px solid rgb(232, 71, 7);
+  height: 38px;
+  width: 38px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+footer .social a:hover{
+  opacity: 0.9;
+}
+footer ul{
+  margin-top: 3px;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: left;
+  margin-left: 3%;
+}
+footer ul li a{
+  text-align: left;
+  padding-left: 15px;
+  text-decoration: none;
+  color: rgb(209, 202, 202);
+  opacity: 0.8;
+ 
+}
+footer ul li{
+ display: inline-block;
+ padding: 0 15px;
+}
+footer ul li a:hover{
+  opacity: 1;
+  color: orangered;
+}
+footer .copyright{
+  margin-top: -1px;
+  text-align: right;
+  color: rgb(209, 202, 202);
+  font-size: 15px;
+  margin-right: 15px;
+  letter-spacing: 0.5px;
+}
+
+/**contact form styling*/
+.contact-body{
+  width: 100%;
+  display: flex;
+  background-color: antiquewhite;
+  margin-top: 8%;
+  padding: 60px;
+}
+
+.contact-form{
+  border:1px solid rgb(251, 251, 251) ;
+  border-radius: 4px 4px 4px 4px;
+  width: 50%;
+  font-size: 15px;
+  padding: 15px;
+  background-color: white;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+form .input-box{
+  padding-top: 12px;
+  padding-bottom: 8px;
+  text-align: left;
+}
+form #details{
+  padding-bottom: 10px;
+  padding-left: 1%;
+  padding-right: 57%;
+}
+form #button-details{
+  padding-left: 3%;
+  padding-right: 36%;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  cursor: pointer;
+  background-color: rgb(213, 73, 23);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px 4px 4px 4px ;
+}
+.contact-form .contact p{
+  text-align: justify;
+  font-size: 15px;
+}
+
+/**---contact form responsive----**/
+@media only screen and (min-width:990px) and (max-width:1200px){
+  form #details{
+    padding-bottom: 10px;
+    padding-left: 3%;
+    padding-right: 48%;
+  }
+  form #button-details{
+    padding-left: 3%;
+    padding-right: 36%;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    cursor: pointer;
+    background-color: rgb(213, 73, 23);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px 4px 4px 4px ;
+  }
+}
+@media only screen and (max-width:990px){
+  form #details{
+    padding-bottom: 10px;
+    padding-left: 3%;
+    padding-right: 45%;
+  }
+}
+@media only screen and (max-width:892px){
+  form #details{
+    padding-bottom: 10px;
+    padding-left: 3%;
+    padding-right: 35%;
+  }
+}
+@media only screen and (max-width:790px){
+  form #details{
+    padding-bottom: 8px;
+    padding-left: 1%;
+    padding-right: 20%;
+  }
+  .contact-2{
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width:690px){
+  form #details{
+    padding-bottom: 8px;
+    padding-left: 1%;
+    padding-right: 17%;
+  }
+}
+
+@media only screen and (min-width:603px) and (max-width:630px){
+  form #details{
+    padding-bottom: 7px;
+    padding-left: -1%;
+    padding-right: 8%;
+  }
+}
+@media only screen and (max-width:603px){
+  .contact-body .contact-form .row .col{
+    margin-left: 10%;
+  }
+  .contact-body .contact-form {
+    padding-left: -25%;
+    padding-right: 40%;
+    width: 100%;
+  }
+  .contact-form  .contact-2{
+    margin-left: 0%;
+  }
+  .contact-form p{
+    margin-right: -40%;
+  }
+}
+@media only screen and (max-width:450px){
+  .contact-body .contact-form {
+    padding-left: -20%;
+    padding-right: 55%;
+    width: 100%;
+    margin-left: -6%;
+  }
+  .contact-form p{
+    margin-right: -100%;
+    text-align: justify;
+  }
+  form #details{
+    padding-bottom: 8px;
+    padding-left: 1%;
+    padding-right: 2%;
+  }
+}
+
+/**the end**/
